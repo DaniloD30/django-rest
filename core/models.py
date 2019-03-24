@@ -41,8 +41,8 @@ class Cesta(models.Model):
 
 class Item(models.Model):
 	id = models.AutoField(primary_key=True)
-	id_cesta = models.ForeignKey(Cesta, null=False, on_delete=models.CASCADE)
-	id_bebida = models.ForeignKey(Bebidas, null=False, on_delete=models.CASCADE)
+	id_cesta = models.IntegerField()
+	id_bebida = models.IntegerField()
 		
 	def __str__(self):
 		return self.id
